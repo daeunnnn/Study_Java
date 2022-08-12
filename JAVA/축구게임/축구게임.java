@@ -1,4 +1,4 @@
-package ÀÚ¹Ù24;
+package ìë°”24;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,50 +15,50 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-public class Ãà±¸°ÔÀÓ {
+public class ì¶•êµ¬ê²Œì„ {
 	public static void main(String[] args) {
 		Soccer soccer = new Soccer ();
 	}
 }
 
 class Soccer extends Frame implements ItemListener, ActionListener {
-	
+	int x =10;
 	private Dimension dimen, dimen1 ;
 	private int xpos, ypos ;
 	Font font15 = new Font("SanSerif", Font.BOLD,15);
 	
-	//°ÔÀÓ °¡´É È½¼ö 
-	Label lbTotGame = new Label("ÃÑ °ÔÀÓ °¡´É È½¼ö :");
-	Label lbGameCnt = new Label("10È¸");
+	//ê²Œì„ ê°€ëŠ¥ íšŸìˆ˜ 
+	Label lbTotGame = new Label("ì´ ê²Œì„ ê°€ëŠ¥ íšŸìˆ˜ :");
+	Label lbGameCnt = new Label("10íšŒ");
 	
-	Label lbList = new Label("¼±¼ö ¸®½ºÆ®");
-	Label lbMan = new Label("Ãà±¸¼±¼ö : ");
-	//ÇöÀç »óÅÂ
-	Label lbResult = new Label("°á°ú : ´ë±â Áß...");
-	//°á°ú Ç¥½Ã
-	Label lbTot = new Label("ÃÑ ÀüÀû :");
-	Label lbTotCnt = new Label("0°ÔÀÓ");
-	//ÀüÀû Ç¥½Ã
-	Label lbShoot = new Label("½¸ ¼º°ø :");
-	Label lbShootCnt = new Label("0È¸");
-	Label lbFail = new Label("½¸ ½ÇÆĞ :");
-	Label lbFailCnt = new Label("0È¸");
-	//ÀüÀû ÃÊ±âÈ­
-	Button btnReset = new Button("ÀüÀû ÃÊ±âÈ­");
-	//½¸ ÇüÅÂ
-	Button btnMd = new Button("Áß°Å¸®½¸");
-	Button btnHd = new Button("Çìµù");
-	Button btnPt = new Button("ÆĞ³ÎÆ¼½¸");
-	//¼±¼ö¸í´Ü
+	Label lbList = new Label("ì„ ìˆ˜ ë¦¬ìŠ¤íŠ¸");
+	Label lbMan = new Label("ì¶•êµ¬ì„ ìˆ˜ : ");
+	//í˜„ì¬ ìƒíƒœ
+	Label lbResult = new Label("ê²°ê³¼ : ëŒ€ê¸° ì¤‘...");
+	//ê²°ê³¼ í‘œì‹œ
+	Label lbTot = new Label("ì´ ì „ì  :");
+	Label lbTotCnt = new Label("0ê²Œì„");
+	//ì „ì  í‘œì‹œ
+	Label lbShoot = new Label("ìŠ› ì„±ê³µ :");
+	Label lbShootCnt = new Label("0íšŒ");
+	Label lbFail = new Label("ìŠ› ì‹¤íŒ¨ :");
+	Label lbFailCnt = new Label("0íšŒ");
+	//ì „ì  ì´ˆê¸°í™”
+	Button btnReset = new Button("ì „ì  ì´ˆê¸°í™”");
+	//ìŠ› í˜•íƒœ
+	Button btnMd = new Button("ì¤‘ê±°ë¦¬ìŠ›");
+	Button btnHd = new Button("í—¤ë”©");
+	Button btnPt = new Button("íŒ¨ë„í‹°ìŠ›");
+	//ì„ ìˆ˜ëª…ë‹¨
 	List li = new List(3,false);
 	
-	//ÆÄÀÏ ÀÔÃâ·Â ¹öÆ°
-	Button btnSave = new Button("ÆÄÀÏ ÀúÀå");
-	Button btnSta = new Button("°ÔÀÓ Åë°è");
+	//íŒŒì¼ ì…ì¶œë ¥ ë²„íŠ¼
+	Button btnSave = new Button("íŒŒì¼ ì €ì¥");
+	Button btnSta = new Button("ê²Œì„ í†µê³„");
 	
-	String ment1[] = {"Áß°Å¸® ½¸ÀÌ ¼º°ø!","Áß°Å¸® ½¸ ½ÇÆĞ!"};
-	String ment2[] = {"Çìµù ½¸ÀÌ ¼º°ø!","Çìµù ½¸ ½ÇÆĞ!"};
-	String ment3[] = {"ÆĞ³ÎÆ¼ ½¸ÀÌ ¼º°ø!","ÆĞ³ÎÆ¼ ½¸ ½ÇÆĞ!"};
+	String ment1[] = {"ì¤‘ê±°ë¦¬ ìŠ›ì´ ì„±ê³µ!","ì¤‘ê±°ë¦¬ ìŠ› ì‹¤íŒ¨!"};
+	String ment2[] = {"í—¤ë”© ìŠ›ì´ ì„±ê³µ!","í—¤ë”© ìŠ› ì‹¤íŒ¨!"};
+	String ment3[] = {"íŒ¨ë„í‹° ìŠ›ì´ ì„±ê³µ!","íŒ¨ë„í‹° ìŠ› ì‹¤íŒ¨!"};
 	
 	int tot=0, ok=0, fail=0 ;
 	int md=0, hd=0, pt=0;
@@ -72,12 +72,12 @@ class Soccer extends Frame implements ItemListener, ActionListener {
 
 	
 	Soccer(){
-		super("Ãà±¸°ÔÀÓ");
+		super("ì¶•êµ¬ê²Œì„");
 		this.setSize(600,400);
 		this.center();
 		this.init();
-		this.list();  //È­¸é ±×¸®±â
-		this.start(); //¸Ş¼­µå Ã³¸®
+		this.list();  //í™”ë©´ ê·¸ë¦¬ê¸°
+		this.start(); //ë©”ì„œë“œ ì²˜ë¦¬
 		this.setVisible (true);
 	}
 	
@@ -131,14 +131,14 @@ class Soccer extends Frame implements ItemListener, ActionListener {
 		this.add(lbGameCnt); lbGameCnt.setFont(font15); 
 		lbGameCnt.setBounds(500,350,200,30);
 	
-		//¼±¼ö ¸í´Ü
+		//ì„ ìˆ˜ ëª…ë‹¨
 		this.add(li); li.setFont(font15); 
 		li.setBounds(60,90,100,100);
-		li.add("¼ÕÈï¹Î");
-		li.add("¸Ş½Ã");
-		li.add("°­³¯µÎ");
+		li.add("ì†í¥ë¯¼");
+		li.add("ë©”ì‹œ");
+		li.add("ê°•ë‚ ë‘");
 		
-		//ÆÄÀÏ ÀÔÃâ·Â ¹öÆ° 
+		//íŒŒì¼ ì…ì¶œë ¥ ë²„íŠ¼ 
 		this.add(btnSave); btnSave.setFont(font15);
 		btnSave.setBounds(270,300,100,30);
 		
@@ -160,7 +160,7 @@ class Soccer extends Frame implements ItemListener, ActionListener {
 	
 		this.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
-				System.exit(0);//È­¸é ´İ±â
+				System.exit(0);//í™”ë©´ ë‹«ê¸°
 			}
 		});
 	}
@@ -181,7 +181,7 @@ class Soccer extends Frame implements ItemListener, ActionListener {
 	@Override
 	public void itemStateChanged(ItemEvent e) {
 		name = li.getSelectedItem();
-		lbMan.setText("Ãà±¸¼±¼ö : "+name);
+		lbMan.setText("ì¶•êµ¬ì„ ìˆ˜ : "+name);
 	}
 
 	
@@ -194,11 +194,11 @@ class Soccer extends Frame implements ItemListener, ActionListener {
 			fail = 0;
 			name = "";
 			game = 10;
-			lbTotCnt.setText(tot+"È¸");
-			lbShootCnt.setText(ok+"È¸");
-			lbFailCnt.setText(fail+"È¸");
-			lbMan.setText("¼±¼ö¼±ÅÃ ´ë±âÁß...");
-			lbResult.setText("ÃÊ±âÈ­ µÇ¾ú½À´Ï´Ù.");
+			lbTotCnt.setText(tot+"íšŒ");
+			lbShootCnt.setText(ok+"íšŒ");
+			lbFailCnt.setText(fail+"íšŒ");
+			lbMan.setText("ì„ ìˆ˜ì„ íƒ ëŒ€ê¸°ì¤‘...");
+			lbResult.setText("ì´ˆê¸°í™” ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			btnMd.setVisible(true);
 			btnHd.setVisible(true);
 			btnPt.setVisible(true);
@@ -208,7 +208,7 @@ class Soccer extends Frame implements ItemListener, ActionListener {
 		
 		if(name.equals(""))
 		{
-			lbResult.setText("¼±¼ö¸¦ °í¸£½Ã¿À");
+			lbResult.setText("ì„ ìˆ˜ë¥¼ ê³ ë¥´ì‹œì˜¤");
 			return;
 		}
 		
@@ -247,7 +247,7 @@ class Soccer extends Frame implements ItemListener, ActionListener {
 			}
 			
 			if(hd == 2) {
-				btnHd.setVisible(false); //¹öÆ° »ç¶óÁö°Ô ÇÏ±â
+				btnHd.setVisible(false); //ë²„íŠ¼ ì‚¬ë¼ì§€ê²Œ í•˜ê¸°
 			}
 			
 		}
@@ -264,10 +264,10 @@ class Soccer extends Frame implements ItemListener, ActionListener {
 				ok++;
 			}
 		}
-		lbTotCnt.setText(tot+"È¸");
-		lbShootCnt.setText(ok+"È¸");
-		lbFailCnt.setText(fail+"È¸");
-		lbGameCnt.setText(game+"È¸");
+		lbTotCnt.setText(tot+"íšŒ");
+		lbShootCnt.setText(ok+"íšŒ");
+		lbFailCnt.setText(fail+"íšŒ");
+		lbGameCnt.setText(game+"íšŒ");
 		
 		if(game == 0) {
 			final Dialog dlg3 = new Dialog(this, "GAME OVER!", true);
@@ -278,7 +278,7 @@ class Soccer extends Frame implements ItemListener, ActionListener {
 		
 			dlg3.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
-				dlg3.setVisible(false);//È­¸é ´İ±â
+				dlg3.setVisible(false);//í™”ë©´ ë‹«ê¸°
 				}
 					
 			});
@@ -289,15 +289,15 @@ class Soccer extends Frame implements ItemListener, ActionListener {
 		}
 		
 		if(ok == 8) {
-			final Dialog dlg = new Dialog(this, "Ã¨ÇÇ¾ğ¸®±× ¿ì½Â!", true);
+			final Dialog dlg = new Dialog(this, "ì±”í”¼ì–¸ë¦¬ê·¸ ìš°ìŠ¹!", true);
 			dlg.setLayout(new BorderLayout());
-			String sss = "Ã¨ÇÇ¾ğ½º¸®±× ¿ì½Â! ÄáÅ©¸®Ãò·¹ÀÌ¼Ç~!";
+			String sss = "ì±”í”¼ì–¸ìŠ¤ë¦¬ê·¸ ìš°ìŠ¹! ì½©í¬ë¦¬ì¸„ë ˆì´ì…˜~!";
 			dlg.add("Center", new Label(sss, Label.CENTER));
 		
 		
 			dlg.addWindowListener(new WindowAdapter() {
 				public void windowClosing(WindowEvent e) {
-					dlg.setVisible(false);//È­¸é ´İ±â
+					dlg.setVisible(false);//í™”ë©´ ë‹«ê¸°
 				}
 			});
 			dlg.setSize(300, 100);
@@ -311,15 +311,15 @@ class Soccer extends Frame implements ItemListener, ActionListener {
 		}
 		
 		if(e.getSource()==btnSta) {
-			final Dialog dlg2 = new Dialog(this, "°ÔÀÓ Åë°è", true);
+			final Dialog dlg2 = new Dialog(this, "ê²Œì„ í†µê³„", true);
 			dlg2.setLayout(new BorderLayout());
-			String aa =name + " / " + tot+ "È¸ µµÀü / ½¸ ¼º°ø :" + ok + " / ½¸ ½ÇÆĞ :" + fail + "\n" ;
+			String aa =name + " / " + tot+ "íšŒ ë„ì „ / ìŠ› ì„±ê³µ :" + ok + " / ìŠ› ì‹¤íŒ¨ :" + fail + "\n" ;
 			dlg2.add("Center", new Label(aa, Label.CENTER));
 		
 		
 			dlg2.addWindowListener(new WindowAdapter() {
 			public void windowClosing(WindowEvent e) {
-				dlg2.setVisible(false);//È­¸é ´İ±â
+				dlg2.setVisible(false);//í™”ë©´ ë‹«ê¸°
 				}
 			});
 			dlg2.setSize(300, 100);
@@ -334,11 +334,11 @@ class Soccer extends Frame implements ItemListener, ActionListener {
 	
 	void save() {
 		name = li.getSelectedItem();
-		String aa =name + " / " + tot+ "È¸ µµÀü / ½¸ ¼º°ø :" + ok + " / ½¸ ½ÇÆĞ :" + fail + "\n" ;
+		String aa =name + " / " + tot+ "íšŒ ë„ì „ / ìŠ› ì„±ê³µ :" + ok + " / ìŠ› ì‹¤íŒ¨ :" + fail + "\n" ;
 		System.out.println(aa);
 	
 	   try{
-	            //ÆÄÀÏ °´Ã¼ »ı¼º
+	            //íŒŒì¼ ê°ì²´ ìƒì„±
 	            File file = new File("C:\\aaa\\work\\soccer.txt");
 	            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file,true));
 
@@ -364,11 +364,11 @@ class Soccer extends Frame implements ItemListener, ActionListener {
 		fail = 0;
 		name = "";
 		game = 10;
-		lbTotCnt.setText(tot+"È¸");
-		lbShootCnt.setText(ok+"È¸");
-		lbFailCnt.setText(fail+"È¸");
-		lbMan.setText("¼±¼ö¼±ÅÃ ´ë±âÁß...");
-		lbResult.setText("ÃÊ±âÈ­ µÇ¾ú½À´Ï´Ù.");
+		lbTotCnt.setText(tot+"íšŒ");
+		lbShootCnt.setText(ok+"íšŒ");
+		lbFailCnt.setText(fail+"íšŒ");
+		lbMan.setText("ì„ ìˆ˜ì„ íƒ ëŒ€ê¸°ì¤‘...");
+		lbResult.setText("ì´ˆê¸°í™” ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		btnMd.setVisible(true);
 		btnHd.setVisible(true);
 		btnPt.setVisible(true);
