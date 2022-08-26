@@ -1,0 +1,21 @@
+220805
+-HTML, JS, CSS+JQuery (v)개인프로젝트 해보기 
+-JAVA
+-JAVA FX(GUI) (v) 자바를 공부한다는 생각으로 진행 
+  =>C# 추가적으로 공부해보기
+-DataBase (v)
+-C
+-Spring Boot+JSP(쉬운 버전 Spring) (v)
+-아두이노(임베디드 프로그래밍)
+-기능명세서, 일정관리 
+-팀 프로젝트 2개 
+
+//리턴 타입 : int 
+//메소드 이름 : getWord
+//파라미터 타입: String
+
+//리턴 타입 : void 
+//메소드 이름 : getArray
+//파라미터 타입 : String[]
+//접근지정자 : public 
+
