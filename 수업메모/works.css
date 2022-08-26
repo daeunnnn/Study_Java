@@ -1,0 +1,17 @@
+.works {
+    height: 360px !important; 
+    margin-bottom: 30px;
+}
+
+.works .card-img-top {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.works .card-img-top img { /*앱솔루트 가운데 보내기*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
