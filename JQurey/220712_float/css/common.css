@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    border: 5px solid red;
+}
+
+#parent {
+    height: 100px;
+}
+
+#first {float: left;}
+#second {float: left;}
+#third {border-color: blue;}
+
+#parent2 {
+    overflow: auto;
+}
+
+#fourth {
+    background-color: yellow;
+    width: 50%;
+    float: left;
+}
+
+#fifth {
+    background-color: pink;
+    width: 50%;
+    float: left;
+}
+
+#seventh {
+    width: 300px;
+    height: 200px;
+    background-color: red;
+}
+
+#parent3 {
+    overflow: auto;
+
+}
+
+.elem {
+    float: left;
+    width: 200px;
+    height: 200px;
+    border: 5px solid red;
+
+}
+
+#victim {
+    clear: both;
+    width: 500px;
+    height: 400px;
+    background-color: orange;
+}
+
+#gnb {
+    overflow: auto;
+    float: right;
+}
+
+nav {
+    overflow: auto;
+}
+
+#gnb a {
+    width: 150px;
+    height: 40px;
+    background-color: #06c;
+    color : white;
+    display: block;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+}
+
+#gnb a:hover {
+    background-color: #59f;
+}
+
+#lnb {
+    overflow: auto;
+    width: 600px;
+    margin: auto;
+}
+
+.main { 
+    width: 120px;
+    height: 50px;
+    background-color: #f0f0f0;
+    float: left;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+
+#imgbox {
+    width: 500px;
+    height: 200px;
+    background-image: url(../images/picture1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+ul {
+    margin-left: 30px;
+    list-style-type: none;
+}
+
+.cen {
+    background-color: red;
+    height: 200px;
+  
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+#para1 {
+    width: 300px;
+    background-color: yellow;
+
+    white-space: nowrap;
+    overflow: hidden;
+   text-overflow: ellipsis;
+
+   opacity: 0.2;
+
+   transition: all 0.4s;
+   position: fixed;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%), rotate();
+}
+
+#para1:hover {
+    background-color: red;
+    width: 200px;
+}
+
+/*미디어쿼리는 css의 가장 하단에 위치해야 한다.
+미디어 쿼리 아래에 다른 룰이 있어선 안된다.
+max-width를 사용하는 경우 미디어쿼리는 내림차순 이어야 한다.*/
+
+@media all and (max-width:000px){
+    #para1 {
+        background-color: aqua;
+    }
+}
+
+@media all and (max-width: 600px){
+    #para1 {
+        background-color: green;
+    }
+}
+

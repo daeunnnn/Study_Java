@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#box1 {
+    background-color: pink;
+    width: 50vw;
+    height: 50vh;
+    overflow: auto;
+    margin: 20px;   
+}
+
+#box2 {
+    width: 150px;
+    height: 100px;
+    background-color: yellow;
+    text-align: center;
+    padding: 30px;
+    border: 20px solid red;
+    
+}

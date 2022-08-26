@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript 연습</title>
+        <meta charset="utf-8"/>
+        <meta name="author" content="최다은"/>
+        <meta name="keywords" content="자바스크립트, 스크립트"/>
+        <meta name="desceiption" content="자바스크립트를 사용하여 html 요소와 css 스타일을 콘트롤 할 수 있다."/>
+        <meta name="viewport" content="initial-scale=1, width=device-width"/>
+        <link href="css/common.css" rel="stylesheet"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <script>
+            function rand(max,min){
+                var result = Math.floor(Math.random() * (max +1 - min) + min );
+                return result;
+            }
+
+
+           /* var floor = i+"";
+            var room = j;
+            for(i=1; i<10; i++){
+                for(j=1; j<11; j++){
+                    if(j<10){
+                        room = "0" + j ;
+                    }
+                    else{
+                        room = j;
+                    }
+                }
+            }
+            var result = floor + room ;
+            alert(result);*/
+
+           /* var now = new Date();
+            var year = now.getFullYear();
+            var month = now.getMonth() +1;
+            if(month < 10){
+                month = "0" + month ;
+            }
+            var date = now.getDate();
+            if(date < 10){
+                date = "0" + date ;
+            }
+            var gay = now.getDay();
+
+            alert(year + "-" + month + "-" + month); */
+
+            //var now = new Date();
+            //var year = now.getFullYear();
+            //var birth = prompt("네자리 생년을 입력하세요");
+            //var age = year - birthday;
+            //alert (age);
+            //if(age >= 20){
+            //    alert("어서옵쇼~");
+            //}else {alert("애들은 가라");
+            //}
+
+           // var a = prompt("첫번째 숫자를 입력하세요");
+           // var b = prompt("두번째 숫자를 입력하세요");
+           // a = Number(a);
+           // b = Number(b);
+           // alert(a+b);
+
+          // var del = confirm("정말로 데이터를 삭제하시겠습니까?");
+          // if(del){
+          //      alert("데이터가 삭제되었습니다.");
+          // }
+          
+        //   var a = "3.14px";
+        //   a = parseInt(a);
+        //   alert(a);
+        </script>    
+            <!-- <button id="stop" type="button">멈춤</button>
+
+        
+            <script>
+                var makeh = setInterval(function(){
+                    document.body.innerHTML += "ㅎ";
+                },100);
+
+                document.getElementById("stop").onclick = function(){
+                    clearInterval(makeh);
+                }
+            </script> -->
+
+        
+
+
+      
+
+        
+           
+       
+    </body>
+</html>
