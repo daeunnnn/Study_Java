@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 200px;
+            height: auto;
+            margin: 100px auto;
+            background-color: #efefef;
+        }
+
+        div {
+            margin-bottom: 30px;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>회원가입</h2>
+        <div>
+            <input id="userid" type="text" placeholder="아이디">
+        </div> 
+        <div>
+            <input id="userpw" type="password" placeholder="비밀번호">
+        </div> 
+        <div>
+            <input id="userpwck" type="password" placeholder="비밀번호 재입력">
+        </div> 
+        <div>
+            <button onclick="dojoin()">회원가입</button>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    function dojoin(){
+        //alert : 알림창
+        //문제 1. input 아이디에 입력된 값을 alert 창에 출력
+        var id = document.getElementById("userid").value;
+        //alert('아이디 :' + id);
+
+        //문제 2. 비밀번호와 비밀번호 재입력 콘솔창으로 출력 
+        var pw = document.getElementById("userpw").value;
+        console.log("비밀번호 :"+pw);
+        var pwck = document.getElementById("userpwck").value;
+        console.log("비밀번호 확인 :"+pwck);
+
+        if(pw != pwck){
+            alert('비밀번호가 일치하지 않습니다!');
+            return false;
+        }
+        //자바스크립트는 기본적으로 문자길이를 제공해준다.
+        console.log(pw.length);
+
+        if(pw.length < 5){
+            alert('비밀번호는 최소 6글자 이상 입력해주세요!');
+            return false;
+        }
+    }
+</script>
+</html>
