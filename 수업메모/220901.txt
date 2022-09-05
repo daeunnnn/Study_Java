@@ -1,0 +1,14 @@
+0901
+join 
+
+
+null과 'null'하고는 다른 의미
+is null, is not null 
+
+PK는 중복허용x (auto index)
+FK는 중복가능 (index 없음)
+insert into dept (deptno, dname, loc)
+values (20, 'DW아카데미', '대전 선화동')
+위 SQL은 dept 테이블에 20번 부서가 이미 있으므로 에러 발생
+
+tip) 자주 조회하는 컬럼 일수록 위에다 정의를 해야함 
