@@ -1,0 +1,17 @@
+vs를 열고 터미널 
+=> 뉴터미널
+=>powershell을 git bash로 변경 
+=> git init 입력 (처음 한번만)
+=> git add . (. 전체파일) 
+=> git status (추가한 파일 확인)
+=> git commit -m "(Refactor) : 코드수정"
+=> git push origin master (원격저장소에 파일 업로드)
+=> git remote -v (깃 원격저장소 연결 확인)
+
+=> git checkout -b 테스트브랜치
+=> git checkout '브랜치이름' (브랜치 이동 및 선택)
+
+*메인 브랜치와 서브 브랜치 파일을 병합할 때 
+pull request => new pull request => 마스터에 병합시킬 브랜치 선택 
+=> create pull request => 코멘트 작성 => create pull request => merge pull request (병합) 
+=> confirm merge => merged! (머지 성공) 
